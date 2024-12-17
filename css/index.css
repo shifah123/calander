@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("normalize.css");
+@import url("settings.css");
+
+* {
+	outline: 0;
+}
+
+body {
+	font-family: var(--body-font-family);
+	background-color: var(--dark-blue);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header {
+	font-size: 3em;
+	padding: 1em 0;
+}
+
+header > button {
+	border: none;
+	color: var(--purple-5);
+	background-color: var(--transparent-0);
+	font-family: var(--title-font-family);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.calendar {
+	width: 40%;
+	min-width: 500px;
+	background-color: rgba(255, 255, 255, 0.1);
+	padding: 1em;
+	border-radius: 0.5em;
+	display: grid;
+	grid-template-rows: 1fr 5fr;
+}
+
+.title {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 1em;
+}
+
+.title > button {
+	background-color: transparent;
+	border: none;
+	height: 100%;
+	width: 10%;
+	color: var(--purple-6);
+	font-weight: bold;
+	font-size: 2em;
+	cursor: pointer;
+}
+
+.title > button:hover {
+	background-color: var(--transparent-1);
+	color: var(--purple-6);
+}
+
+.month-year-values {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+}
+
+.month-value,
+.year-value {
+	border: none;
+	background-color: var(--transparent-0);
+	color: var(--purple-5);
+	font-size: 2em;
+	cursor: pointer;
+	padding: 0.1em 0.3em;
+	border-radius: 0.2em;
+	font-weight: bold;
+}
+
+.month-value:hover,
+.year-value:hover {
+	background-color: var(--transparent-1);
+	color: var(--purple-6);
+}
+
+.month-value {
+	text-align: end;
+	width: auto;
+}
+
+.year-value {
+	text-align: start;
+	width: 2.5em;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+.year-value:focus {
+	background-color: var(--purple-5);
+	color: var(--purple-1);
+}
+
+.month {
+	display: grid;
+}
+
+.month > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.week-day {
+	color: var(--purple-6);
+	opacity: 0.5;
+}
+
+.month-day {
+	color: var(--gray-7);
+	border-radius: 0.3em;
+	font-size: 1.1em;
+}
+
+.month-day:hover {
+	background-color: var(--purple-1);
+}
+
+.is-today {
+	background-color: var(--purple-4);
+}
+
+.month-name {
+	color: var(--gray-7);
+	cursor: pointer;
+	border-radius: 0.3em;
+	font-size: 1.3em;
+}
+
+.month-name:hover {
+	background-color: var(--transparent-1);
+}
+
+.left-button,
+.right-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.left-button img,
+.right-button img {
+	width: 20px;
+}
+
+.signature {
+	font-family: monospace;
+	color: #fff;
+	opacity: 0.3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1em 0;
+}
+
+.signature a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.signature a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+	.calendar {
+		min-width: 400px;
+		height: 400px;
+		padding: 0.8em;
+	}
+
+	.month-day {
+		opacity: 0.8;
+	}
+
+	.month-value,
+	.year-value {
+		font-size: 1.7em;
+	}
+	.left-button img,
+	.right-button img {
+		width: 17px;
+	}
+}
+
+@media (max-width: 500px) {
+	.calendar {
+		min-width: 350px;
+		height: 350px;
+		padding: 0.7em;
+	}
+
+	.month {
+		font-size: 0.9em;
+	}
+
+	.month-value,
+	.year-value {
+		font-size: 1.5em;
+	}
+	.left-button img,
+	.right-button img {
+		width: 15px;
+	}
+}
+
+@media (max-width: 430px) {
+	.calendar {
+		min-width: 300px;
+		height: 300px;
+	}
+
+	.month {
+		font-size: 0.8em;
+	}
+
+	.month-value,
+	.year-value {
+		font-size: 1.3em;
+	}
+	.left-button img,
+	.right-button img {
+		width: 13px;
+	}
+}

@@ -1,0 +1,29 @@
+:root {
+	--black: #333;
+	--gray-1: #555;
+	--gray-2: #777;
+	--gray-3: #999;
+	--gray-4: #bbb;
+	--gray-5: #ccc;
+	--gray-6: #ddd;
+	--gray-7: #eee;
+	--white: #fefefe;
+
+	--purple-1: #371180;
+	--purple-2: #503780;
+	--purple-3: #591bcc;
+	--purple-4: #6d21ff;
+	--purple-5: #a16eff;
+	--purple-6: #b892fd;
+	--purple-7: #caaeff;
+
+	--dark-blue: #00092c;
+
+	--transparent-0: rgba(0, 0, 0, 0);
+	--transparent-1: rgba(0, 0, 0, 0.2);
+
+	--shadow: 0 0 15px 5px var(--medium-gray);
+
+	--title-font-family: "Dancing Script", sans-serif;
+	--body-font-family: "Roboto", sans-serif;
+}
